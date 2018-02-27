@@ -1,0 +1,53 @@
+
+
+button {
+  cursor: pointer;
+  height: 30px;
+  padding-left: 10px;
+  text-align: left;
+  vertical-align: middle;
+  width: 120px;
+}
+
+ol {
+  margin-top: 10px;
+  padding-left: 30px;
+}
+
+li {
+
+}
+
+.column {
+  margin: 20px;
+  text-align: center;
+}
+
+.game-info {
+  font-size: xx-large;
+}
+
+.game-board {
+  background-color: #4679BD;
+  border-radius: 10px;
+  padding: 5px;
+}
+
+.square {
+  background-color: aqua;
+  border-radius: 10px;
+  color: black;
+  font-size: xx-large;
+  height: 60px;
+  line-height: 60px;
+  margin: 5px;
+  padding: 0;
+  text-align: center;
+  vertical-align: middle;
+  width: 60px;
+}
+
+.row {
+  background-color: aqua;
+  display: flex;
+}

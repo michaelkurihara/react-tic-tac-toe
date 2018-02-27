@@ -74,6 +74,8 @@ class Board extends React.Component {
     // }
     return (
         <div>
+          myHeader
+
           <div className="board-row">
             {this.renderSquare(0)}
             {this.renderSquare(1)}
@@ -152,6 +154,7 @@ class Game extends React.Component {
     });
 
     let status;
+
     if (winner) {
       status = "Winner: " + winner;
     } else {
@@ -160,15 +163,21 @@ class Game extends React.Component {
 
     return (
         <div className="game">
-          <div className="game-board">
-            <Board
-                squares={current.squares}
-                onClick={i => this.handleClick(i)}
-            />
-          </div>
-          <div className="game-info">
-            <div>{status}</div>
-            <ol>{moves}</ol>
+          <div class="row">
+            <div class="column">
+              <div className="game-board">
+                <Board
+                    squares={current.squares}
+                    onClick={i => this.handleClick(i)}
+                />
+              </div>
+            </div>
+            <div class="column">
+              <div className="game-info">
+                <div>{status}</div>
+                <ol>{moves}</ol>
+              </div>
+            </div>
           </div>
         </div>
     );
@@ -190,7 +199,7 @@ function calculateWinner(squares) {
   ];
   for (let i = 0; i < lines.length; i++) {
     const [a, b, c] = lines[i];
-    if (squares[a] && squares[a] === squares[b] && squares[a] === squares[c]) {
+    if (squares[a] && (squares[a] === squares[b]) && (squares[a] === squares[c])) {
       return squares[a];
     }
   }
