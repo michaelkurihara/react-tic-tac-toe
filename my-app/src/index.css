@@ -9,6 +9,12 @@ button {
   width: 120px;
 }
 
+h2 {
+  color: ivory;
+  text-transform: uppercase;
+  text-shadow: lightgrey;
+}
+
 ol {
   margin-top: 10px;
   padding-left: 30px;

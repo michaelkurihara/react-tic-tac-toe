@@ -74,8 +74,7 @@ class Board extends React.Component {
     // }
     return (
         <div>
-          myHeader
-
+          <h2>Tic-Tac-Toe</h2>
           <div className="board-row">
             {this.renderSquare(0)}
             {this.renderSquare(1)}
@@ -163,8 +162,8 @@ class Game extends React.Component {
 
     return (
         <div className="game">
-          <div class="row">
-            <div class="column">
+          <div className="row">
+            <div className="column">
               <div className="game-board">
                 <Board
                     squares={current.squares}
@@ -172,7 +171,7 @@ class Game extends React.Component {
                 />
               </div>
             </div>
-            <div class="column">
+            <div className="column">
               <div className="game-info">
                 <div>{status}</div>
                 <ol>{moves}</ol>
