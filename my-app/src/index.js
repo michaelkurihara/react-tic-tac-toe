@@ -1,6 +1,10 @@
+
 import React from 'react';
 import ReactDOM from 'react-dom';
+import 'semantic-ui-css/semantic.min.css';
 import './index.css';
+import { Container, Dropdown, Grid, Segment } from 'semantic-ui-react';
+
 
 
 // class Square extends React.Component {
@@ -74,7 +78,6 @@ class Board extends React.Component {
     // }
     return (
         <div>
-          <h2>Tic-Tac-Toe</h2>
           <div className="board-row">
             {this.renderSquare(0)}
             {this.renderSquare(1)}
@@ -153,7 +156,6 @@ class Game extends React.Component {
     });
 
     let status;
-
     if (winner) {
       status = "Winner: " + winner;
     } else {
@@ -161,23 +163,34 @@ class Game extends React.Component {
     }
 
     return (
-        <div className="game">
-          <div className="row">
-            <div className="column">
-              <div className="game-board">
-                <Board
-                    squares={current.squares}
-                    onClick={i => this.handleClick(i)}
-                />
-              </div>
-            </div>
-            <div className="column">
-              <div className="game-info">
-                <div>{status}</div>
-                <ol>{moves}</ol>
-              </div>
-            </div>
-          </div>
+        <div>
+          <Container>
+            <Grid className="game" columns="equal">
+              <Grid.Row>
+                <Grid.Column textAlign="center">
+                  <h1>Tic-Tac-Toe</h1>
+                </Grid.Column>
+              </Grid.Row>
+              <Grid.Row>
+                <Grid.Column>
+                  <Segment className="tictactoebackground" compact>
+                    <div className="game-board">
+                      <Board
+                          squares={current.squares}
+                          onClick={i => this.handleClick(i)}
+                      />
+                    </div>
+                  </Segment>
+                </Grid.Column>
+                <Grid.Column>
+                  <div className="game-info">
+                    <div className="game-status">{status}</div>
+                    <ol>{moves}</ol>
+                  </div>
+                </Grid.Column>
+              </Grid.Row>
+            </Grid>
+          </Container>
         </div>
     );
   }
@@ -198,7 +211,7 @@ function calculateWinner(squares) {
   ];
   for (let i = 0; i < lines.length; i++) {
     const [a, b, c] = lines[i];
-    if (squares[a] && (squares[a] === squares[b]) && (squares[a] === squares[c])) {
+    if (squares[a] && squares[a] === squares[b] && squares[a] === squares[c]) {
       return squares[a];
     }
   }
