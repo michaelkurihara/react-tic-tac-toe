@@ -1,4 +1,7 @@
 
+body {
+  background-color: aqua;
+}
 
 button {
   cursor: pointer;
@@ -9,24 +12,21 @@ button {
   width: 120px;
 }
 
-h2 {
-  color: ivory;
-  text-transform: uppercase;
-  text-shadow: lightgrey;
-}
-
 ol {
-  margin-top: 10px;
-  padding-left: 30px;
+  font-size: large;
+  padding-left: 12px;
 }
 
 li {
-
+  font-size: small;
+  padding-left: 10px;
 }
 
-.column {
-  margin: 20px;
-  text-align: center;
+.column .tictactoebackground {
+    background-color: #4679BD;
+    border-radius: 10px;
+    margin-left: 300px;
+    padding: 5px;
 }
 
 .game-info {
@@ -39,8 +39,17 @@ li {
   padding: 5px;
 }
 
+.game-status {
+  font-size: large;
+  margin-bottom: 20px;
+  text-align: left;
+}
+
+.grid.game {
+    margin-top: 20px;
+}
 .square {
-  background-color: aqua;
+  background: aqua;
   border-radius: 10px;
   color: black;
   font-size: xx-large;
@@ -51,9 +60,4 @@ li {
   text-align: center;
   vertical-align: middle;
   width: 60px;
-}
-
-.row {
-  background-color: aqua;
-  display: flex;
 }
