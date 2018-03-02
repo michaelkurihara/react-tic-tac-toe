@@ -1,7 +1,4 @@
-<<<<<<< Updated upstream
 
-=======
->>>>>>> Stashed changes
 body {
   background-color: aqua;
 }
@@ -15,22 +12,11 @@ button {
   width: 120px;
 }
 
-<<<<<<< Updated upstream
-=======
-h2 {
-  color: black;
-  align-content: center;
-  text-transform: uppercase;
-  text-shadow: lightgrey;
-}
-
->>>>>>> Stashed changes
 ol {
   font-size: large;
   padding-left: 12px;
 }
 
-<<<<<<< Updated upstream
 li {
   font-size: small;
   padding-left: 10px;
@@ -40,11 +26,6 @@ li {
     background-color: #4679BD;
     border-radius: 10px;
     padding: 5px;
-=======
-.column {
-  margin: 20px;
-  text-align: center;
->>>>>>> Stashed changes
 }
 
 .game-info {
