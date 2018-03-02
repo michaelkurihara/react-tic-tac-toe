@@ -7,6 +7,10 @@ import { Container, Dropdown, Grid, Segment } from 'semantic-ui-react';
 
 
 
+function myHeader(props) {
+
+}
+
 // class Square extends React.Component {
 //   render() {
 //     return (
@@ -163,6 +167,7 @@ class Game extends React.Component {
     }
 
     return (
+<<<<<<< Updated upstream
         <div>
           <Container>
             <Grid className="game" columns="equal">
@@ -191,6 +196,30 @@ class Game extends React.Component {
               </Grid.Row>
             </Grid>
           </Container>
+=======
+        <div className="game">
+          {/*<div className="row">*/}
+            {/*<h2>Tic-Tac-Toe</h2>*/}
+          {/*</div>*/}
+
+          <div className="row">
+            <div className="column">
+              <h2>Tic-Tac-Toe</h2>
+              <div className="game-board">
+                <Board
+                    squares={current.squares}
+                    onClick={i => this.handleClick(i)}
+                />
+              </div>
+            </div>
+            <div className="column">
+              <div className="game-info">
+                <div>{status}</div>
+                <ol>{moves}</ol>
+              </div>
+            </div>
+          </div>
+>>>>>>> Stashed changes
         </div>
     );
   }
