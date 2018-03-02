@@ -173,7 +173,7 @@ class Game extends React.Component {
               </Grid.Row>
               <Grid.Row>
                 <Grid.Column>
-                  <Segment className="tictactoebackground" compact>
+                  <Segment className="tictactoebackground" compact floated="right">
                     <div className="game-board">
                       <Board
                           squares={current.squares}
